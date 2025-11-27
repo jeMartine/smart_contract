@@ -1,0 +1,33 @@
+---
+import * as Client from 'contador_testnet';
+import { Keypair, rpc } from '@stellar/stellar-sdk';
+
+const contract = new Client.Client({
+  ...Client.networks.testnet,
+  rpcUrl: 'https://soroban-testnet.stellar.org:443'
+});
+
+let stateTx = await contract.get_state();
+let state = stateTx.result;
+
+
+if (Astro.request.method === "POST") {
+  stateTx = await contract.get_state();
+  state = stateTx.result;
+}
+---
+
+<link rel="stylesheet" href="/styles.css" />
+
+<div class="container">
+  <h1>Contador Soroban</h1>
+
+  <div class="state-box">
+    <p><span class="label">Count:</span> {state.count}</p>
+    <p><span class="label">Ultimo incremento:</span> {state.last_incr}</p>
+  </div>
+
+    <form method="POST" class="form">
+    <button type="submit" class="btn">Actualizar</button>
+  </form>
+</div>

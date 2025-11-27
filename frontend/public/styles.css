@@ -1,0 +1,89 @@
+/* Layout general */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  color: #222;
+}
+
+/* Contenedor principal */
+.container {
+  background: white;
+  padding: 32px;
+  width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.container h1 {
+  margin: 0 0 20px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #3b4d61;
+}
+
+/* Datos del contrato */
+.state-box {
+  background: #eef2f6;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Input */
+.input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+}
+
+/* Botón */
+.btn {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
